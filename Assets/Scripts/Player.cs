@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         if(collision.gameObject.tag == "Obstacles")
         {
             GameManager.thisManager.Damage(1);
+            Destroy(collision.gameObject);
         }
     }
 }
