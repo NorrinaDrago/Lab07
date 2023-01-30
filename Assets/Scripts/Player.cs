@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -18,12 +19,20 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             thisAnimation.Play();
-            transform.position = transform.up * 10f * Time.deltaTime;
+            transform.position = transform.up * 3f * Time.deltaTime;
         }
 
         if(transform.position.y < -5f)
         {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Obstacles")
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

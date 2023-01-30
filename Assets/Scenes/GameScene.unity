@@ -283,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 9128773495855167462, guid: fa616eb311850a54498fbc4920bda0fa,
         type: 3}
       propertyPath: m_Constraints
-      value: 90
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 9128773495855167462, guid: fa616eb311850a54498fbc4920bda0fa,
         type: 3}
@@ -448,6 +448,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7942643918165592038, guid: 6c6e5f222f546d84ea2769878189e2dd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942643918165592038, guid: 6c6e5f222f546d84ea2769878189e2dd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -307
+      objectReference: {fileID: 0}
     - target: {fileID: 7942643919102861665, guid: 6c6e5f222f546d84ea2769878189e2dd,
         type: 3}
       propertyPath: m_UiScaleMode
