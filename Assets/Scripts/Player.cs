@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     private Animation thisAnimation;
     private Transform transform;
+    Vector3 orignalposition;
     void Start()
     {
         transform = GetComponent<Transform>();
@@ -24,7 +25,9 @@ public class Player : MonoBehaviour
 
         if(transform.position.y < -5f)
         {
-            SceneManager.LoadScene("GameOverScene");
+            GameManager.thisManager.Damage(1);
+            orignalposition.y = 0;
+            transform.position = orignalposition;
         }
     }
 
@@ -32,7 +35,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Obstacles")
         {
-            SceneManager.LoadScene("GameOverScene");
+            GameManager.thisManager.Damage(1);
         }
     }
 }
